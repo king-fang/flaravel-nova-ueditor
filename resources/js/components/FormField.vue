@@ -54,7 +54,6 @@ export default {
          * Update the field's internal value.
          */
         handleChange(value) {
-            console.log(value)
             this.value = value
         },
     },
