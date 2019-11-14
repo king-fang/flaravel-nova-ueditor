@@ -30,9 +30,8 @@ export default {
             window.UEDITOR_CONFIG.serverUrl = this.url
             this.editor = UE.getEditor(this.id,this.config)
             this.editor.ready(function () {
-                that.editor.setContent(that.content)
+                that.editor.setContent(that.content || '')
                 that.editor.addListener("contentchange", function () {
-                    console.log(that.getUEContent())
                     that.$emit('ueValue', that.getUEContent())
                 })
             })

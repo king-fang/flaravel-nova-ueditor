@@ -557,6 +557,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          * Update the field's internal value.
          */
         handleChange: function handleChange(value) {
+            console.log(value);
             this.value = value;
         }
     },
@@ -651,7 +652,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -1039,9 +1040,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             window.UEDITOR_CONFIG.serverUrl = this.url;
             this.editor = UE.getEditor(this.id, this.config);
             this.editor.ready(function () {
-                that.editor.setContent(that.content);
+                that.editor.setContent(that.content || '');
                 that.editor.addListener("contentchange", function () {
-                    console.log(that.getUEContent());
                     that.$emit('ueValue', that.getUEContent());
                 });
             });
