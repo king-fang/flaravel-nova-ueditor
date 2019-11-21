@@ -27,6 +27,7 @@ export default {
                 initialFrameWidth: this.field.width,
                 initialFrameHeight: this.field.height,
                 autoHeightEnabled:false,
+                zIndex: this.field.zIndex
             },
             serveUrl: ''
         }

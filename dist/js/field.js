@@ -526,7 +526,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             config: {
                 initialFrameWidth: this.field.width,
                 initialFrameHeight: this.field.height,
-                autoHeightEnabled: false
+                autoHeightEnabled: false,
+                zIndex: this.field.zIndex
             },
             serveUrl: ''
         };
@@ -557,7 +558,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          * Update the field's internal value.
          */
         handleChange: function handleChange(value) {
-            console.log(value);
             this.value = value;
         }
     },
